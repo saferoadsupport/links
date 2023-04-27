@@ -128,8 +128,13 @@ window.open('https://track.v5.saferoad.net/wasl/vehicleinquiry', '_blank');
 ChangeURL(order);
 }
 
-function imeiEnquiry(order){
-window.open('https://track.v5.saferoad.net/Management/imeiEnquiry', '_blank');
+function VehicleInquiry(order){
+window.open('https://track.v5.saferoad.net/wasl/vehicleinquiry', '_blank');
+ChangeURL(order);
+}
+
+function CompanyInquiry(order){
+window.open('https://track.v5.saferoad.net/WASL/CompanyInquiry', '_blank');
 ChangeURL(order);
 }
 
@@ -190,6 +195,7 @@ window.onload = onLoad;
 </p>
 </p>
 <input type="button" value="Vehicle Inquiry" onclick="VehicleInquiry(document.getElementById('txtValue').value)" />
+<input type="button" value="Company Inquiry" onclick="CompanyInquiry(document.getElementById('txtValue').value)" />
 </p>
 </p>
 <input type="button" value="Imei Enquiry" onclick="imeiEnquiry(document.getElementById('txtValue').value)" />
