@@ -75,6 +75,12 @@ window.open('https://track.v5.saferoad.net/VehicleManagment?accountID=' + order 
 ChangeURL(order);
 }
 
+function AddVehicle(order){
+if(order)
+window.open('https://track.v5.saferoad.net/VehicleManagment/AddVehicleInfo?AccountID=' + order , '_blank');
+ChangeURL(order);
+}
+
 function VehicleExportToExcel(order){
 if(order)
 window.open('https://track.v5.saferoad.net/VehicleManagment/ExportToExcel?search=&AccountID=' + order , '_blank');
@@ -84,6 +90,12 @@ ChangeURL(order);
 function DevicesManagement(order){
 if(order)
 window.open('https://track.v5.saferoad.net/DevicesManagement?accountID=' + order , '_blank');
+ChangeURL(order);
+}
+
+function AddDevice(order){
+if(order)
+window.open('https://track.v5.saferoad.net/DevicesManagement/AddDeviceInfo?AccountID=' + order , '_blank');
 ChangeURL(order);
 }
 
@@ -172,10 +184,12 @@ window.onload = onLoad;
 </p>
 </p>
 <input type="button" value="Vehicle Managment" onclick="VehicleManagment(document.getElementById('txtValue').value)" />
+<input type="button" value="Add Vehicle" onclick="AddVehicle(document.getElementById('txtValue').value)" />
 <input type="button" value="Vehicle List To Excel" onclick="VehicleExportToExcel(document.getElementById('txtValue').value)" />
 </p>
 </p>
 <input type="button" value="Devices Management" onclick="DevicesManagement(document.getElementById('txtValue').value)" />
+<input type="button" value="Add Device" onclick="AddDevice(document.getElementById('txtValue').value)" />
 </p>
 </p>
 <input type="button" value="Drivers Management" onclick="DriversManagement(document.getElementById('txtValue').value)" />
